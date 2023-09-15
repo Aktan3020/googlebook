@@ -31,8 +31,6 @@ function App(): ReactElement {
   const [start, setStart] = useState(0)
   const { books, isloading, error } = useAppSelector((state) => state.booksSlice)
   const { search_text,category ,order} = useAppSelector((state) => state.searchSlice)
-  console.log(category);
-  
   const dispatch = useAppDispatch()
 
   useEffect(() => {

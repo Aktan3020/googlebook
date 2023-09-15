@@ -10,10 +10,7 @@ export const fetchBooks = createAsyncThunk('books/fetchBooks', async (payload:Pa
         const response = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${payload.search_text}?subject:${payload.category}&orderBy=${payload.order}&key=AIzaSyB-YZnSNyxGYSR3CgeYAHFFE0eAWb6AsUY`,{
             signal: payload.signal
         });
-        const data: Book = await response.json();
-        
-        console.log('fetchdata',data);
-        
+        const data: Book = await response.json();        
         return data;
     } catch (err) { 
         return thunkApi.rejectWithValue("Произошла ошибка при загрузке книг."+ err);
