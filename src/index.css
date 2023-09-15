@@ -1,0 +1,134 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.search_container {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.search_container_input {
+  width: 230px;
+  height: 40px;
+  background: aqua;
+  border: none;
+  padding: 20px;
+  transition: all 0.3s;
+
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 12px;
+}
+
+.search_container_button {
+  height: 40px;
+  width: 80px;
+  border: none;
+  background: rgb(11, 80, 80);
+  color: white;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 12px;
+  transition: all 0.3s;
+}
+
+.search_container_input:focus {
+  box-shadow: rgba(25, 216, 230, 0.719) 0px 0px 12px;
+  outline: none;
+
+}
+
+.search_container_input::placeholder {
+  color: rgb(124, 115, 115);
+}
+
+.search_container_input:focus~.search_container_button {
+  box-shadow: rgba(25, 216, 230, 0.719) 0px 0px 12px;
+
+}
+
+.title {
+  text-align: center;
+  font-size: 2.3em;
+  color: white;
+  margin: 0;
+}
+
+header {
+  background: url(https://i01.fotocdn.net/s111/c8bf9c54df96fbe2/public_pin_l/2485722017.jpg);
+  height: 270px;
+}
+
+.books_container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 50px;
+}
+
+.books_container img {
+  width: 100%;
+  height: 55%;
+  object-fit: cover;
+  border-radius: 5px;
+  display: block;
+}
+
+.book {
+  width: 30%;
+  height: 650px;
+  padding: 10px;
+  background: #e6da56;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.book_desc,.book_title,.book_category,.book_author {
+  margin-top: 10px;
+
+  background: #615f47;
+  color: white;
+  border-radius: 5px;
+}
+.book_authors{
+  margin-top: 5px;
+  display: flex;
+  overflow: auto;
+  gap: 5px;
+  width: 100%;  
+  height: 50px;
+}
+.book_author{
+  width: fit-content;
+  height: 20px;
+  white-space: nowrap;
+}
+.load_more{
+  width: 100%;
+  display: block;
+  background: rgb(136, 112, 47);
+  height: 70px;
+  border: none;
+  font-size: 30px;
+  color: white;
+  font-weight: 600;
+}
+@media (max-width:800px) {
+  .book{
+    width: 100%;
+  }
+}
